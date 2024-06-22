@@ -1,8 +1,4 @@
-# CodingChallenge
-
-Write code for a simple ATM. It doesn't need any UI (either graphical or console), but a controller should be implemented and tested.
-
-Requirements
+## Requirements
 At least the following flow should be implemented:
 
 Insert Card => PIN number => Select Account => See Balance/Deposit/Withdraw
@@ -17,16 +13,49 @@ Based on your work, another engineer should be able to implement the user interf
 
 You can simplify some complex real world problems if you think it's not worth illustrating in the project.
 
-How to submit
+## How to submit
 Please upload the code for this project to GitHub or anywhere, and post a link to your repository below. Please attach the instruction to clone your project, build and run tests in README.md file in the root directory of the repository. Please attach the test code(or Test Case), too.
 
-### Instructions
+## Instructions to Run this Project
 
-#### Build 
+#### To clone this repository
+```
+ git clone https://github.com/RaulEP/CodingChallenge.git
+```
+
+This project can be build using Cmake
+
+#### To build this project go to root directory
+```
+cd CodingChallenge
+```
+#### create build folder
+```
+mkdir build
 cd build
+```
+
+#### build the project
+```
 cmake ..
 make
+```
 
-#### Execute
+#### Now go to executable directory and run:
+```
 cd bin
 ./atm_controller
+```
+
+## Test Project
+
+Everytime you Run this project, the ATM System loads a mock customer database with the following data:
+
+Customer Name | Balance | Account Type | Card Number | PIN |
+|----------|----------|----------|----------|----------|
+oliver     | 500   | savings    | 6682805795962558   | 1234   |
+kim        | 200   |  savings    | 2973208582578615   | 4321   |
+bear       | 100   | savings    | 5729530215776072   | 5421   |
+adolfo     | 0   | savings    | 2094410478141323   | 9876   |
+
+You can use this data to interact with the different options in the ATM to Test its perfomance.
